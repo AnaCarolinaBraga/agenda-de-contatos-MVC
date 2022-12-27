@@ -20,10 +20,33 @@ namespace AgendaDeContatosMVC.Controllers
         }
 
         // GET: Contacts
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string name)
         {
-              return View(await _context.AgContacts.ToListAsync());
+            if (String.IsNullOrEmpty(name))
+            {
+                return View(await _context.AgContacts.OrderBy(x => x.Name).ToListAsync());
+            }
+            else
+            {
+                var searchItems = await _context.AgContacts.Where(s => s.Name.Contains(name)).ToListAsync();
+                return View(searchItems);
+            }
         }
+
+        // GET: Specific Contacts
+        //public async Task<IActionResult> Index(string name)
+        //{
+        //    if (String.IsNullOrEmpty(name))
+        //    {
+        //        return View(await _context.AgContacts.OrderBy(x => x.Name).ToListAsync());
+        //    }
+        //    else
+        //    {
+        //        var searchItems = await _context.AgContacts.Where(s => s.Name.Contains(name)).ToListAsync();
+        //        return View(searchItems);
+        //    }
+           
+        //}
 
         // GET: Contacts/Details/5
         public async Task<IActionResult> Details(int? id)
