@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AgendaDeContatosMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221227211323_AddContactToDatabase")]
+    [Migration("20221227213402_AddContactToDatabase")]
     partial class AddContactToDatabase
     {
         /// <inheritdoc />
