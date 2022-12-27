@@ -12,18 +12,17 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AgendaDeContatosMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221227213402_AddContactToDatabase")]
+    [Migration("20221227214553_AddContactToDatabase")]
     partial class AddContactToDatabase
     {
-        /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.1")
+                .HasAnnotation("ProductVersion", "6.0.12")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("AgendaDeContatosMVC.Models.Contact", b =>
                 {
@@ -31,7 +30,7 @@ namespace AgendaDeContatosMVC.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Adress")
                         .IsRequired()
@@ -48,8 +47,9 @@ namespace AgendaDeContatosMVC.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Phone")
-                        .HasColumnType("int");
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

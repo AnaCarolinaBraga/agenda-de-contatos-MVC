@@ -12,7 +12,7 @@ namespace AgendaDeContatosMVC.Models
 
         public string EMail { get; set; }
 
-        public int Phone { get; set; }
+        public string Phone { get; set; }
 
         public string Adress { get; set; }
 
