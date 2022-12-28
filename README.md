@@ -11,6 +11,13 @@
 
 <div align="center">
   <h1>Agenda de contatos MVC</h1>
+  <h4>Projeto CRUD de agenda de contatos utilizando o padrão MVC</h4>
+  <ul>
+    <li>Agenda de contatos, cria, edita, deleta e pesquisa contatos registrados</li>
+    <li>Conexão da aplicação com SQL Server através do Entity Framework</li>
+    <li>Modelo de layout retirado do Bootswatch</li>
+    <li>Testes unitários das Views com XUnit</li>
+  </ul>
 </div>
 
 ### Tecnologias Utilizadas
@@ -19,24 +26,21 @@
 - Asp.net core Web App
 - Entity Framework
 - SQL Server
+- XUnit
 
 
-### Nuget Package utilizado
+### NuGet Packages utilizados
 
 - Microsoft.EntityFrameworkCore
 - Microsoft.EntityFrameworkCore.SqlServer
 - Microsoft.EntityFrameworkCore.Tools
-
-### Sobre o projeto
-- Feito para aprender sobre o modelo MVC
-- Agenda de contatos, cria, edita, deleta e pesquisa contatos registrados
-- Conexão da aplicação com SQL Server
-- Modelo de layout retirado do Bootswatch
+- Microsoft.AspNetCore.Mvc.Testing
+- xunit
 
 ### O que falta fazer?
 
 - Acrescentar imagens para ilustrar o projeto
-- Testar testes no modelo MVC
+- Fazer testes para o controller
 - Melhorar o Design
 
 
