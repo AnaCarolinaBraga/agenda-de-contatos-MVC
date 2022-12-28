@@ -45,7 +45,7 @@
 
 ### Gif demonstrativo
 <div align="center">
-<img align="center" alt="Rafa-pic" style="border-radius:100px;" src="https://media.discordapp.net/attachments/951643233665044541/1057750780167344280/ezgif.com-gif-maker2.gif">
+<img align="center" alt="Rafa-pic" style="border-radius:100px;" src="https://media.discordapp.net/attachments/951643233665044541/1057765625243635772/ezgif.com-gif-maker5.gif">
 </div>
 
 #### Passo a passo do gif
