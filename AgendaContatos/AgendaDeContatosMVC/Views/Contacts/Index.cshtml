@@ -4,30 +4,40 @@
     ViewData["Title"] = "IndexSearch";
 }
 
-<h1>Index</h1>
 
-<p>
-    <span class="text-end">Novo contato</span>
-    <a asp-action="Create"><i class="bi bi-plus-square"></i></a>
-</p>
-<form class="d-flex">
-        <input class="form-control me-sm-2" type="search" placeholder="Search" name="name">
+<div class="text-center">
+    <div class="display-4">
+            <h3>Contatos</h3>
+     </div>
+    <p>
+        <span class="text-end">Novo contato</span>
+        <a asp-action="Create"><i class="bi bi-plus-square"></i></a>
+    </p>
+    <form class="d-flex" style="justify-content: center;">
+        <input class="form-control me-sm-2" type="search" placeholder="Search" name="name" style="width: 30%;">
         <button class="btn btn-secondary my-2 my-sm-0" asp-action="Index" type="submit">Search</button>
-</form>
-<table class="table">
+    </form>
+    
+</div>
+
+<table class="table" style="justify-content: center;">
     <thead>
         <tr>
-            <th>
+            <th width="20%">
+
+            </th>
+            <th width="60%" >
                 @Html.DisplayNameFor(model => model.Name)
             </th>
-            <th>
-                <a asp-action="Create"><i class="bi bi-plus-square"></i></a>
+            <th width="30%">
             </th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+            </td>
             <td>
                 <a asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Name)</a>
             </td>

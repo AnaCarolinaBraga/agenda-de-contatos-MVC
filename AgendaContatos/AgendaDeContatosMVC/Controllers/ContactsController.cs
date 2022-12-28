@@ -33,20 +33,6 @@ namespace AgendaDeContatosMVC.Controllers
             }
         }
 
-        // GET: Specific Contacts
-        //public async Task<IActionResult> Index(string name)
-        //{
-        //    if (String.IsNullOrEmpty(name))
-        //    {
-        //        return View(await _context.AgContacts.OrderBy(x => x.Name).ToListAsync());
-        //    }
-        //    else
-        //    {
-        //        var searchItems = await _context.AgContacts.Where(s => s.Name.Contains(name)).ToListAsync();
-        //        return View(searchItems);
-        //    }
-           
-        //}
 
         // GET: Contacts/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -83,6 +69,7 @@ namespace AgendaDeContatosMVC.Controllers
             {
                 _context.Add(contact);
                 await _context.SaveChangesAsync();
+                TempData["sucess"] = "Contato criado com sucesso!";
                 return RedirectToAction(nameof(Index));
             }
             return View(contact);
@@ -134,6 +121,7 @@ namespace AgendaDeContatosMVC.Controllers
                         throw;
                     }
                 }
+                TempData["sucess"] = "Contato editado com sucesso!";
                 return RedirectToAction(nameof(Index));
             }
             return View(contact);
@@ -173,6 +161,7 @@ namespace AgendaDeContatosMVC.Controllers
             }
             
             await _context.SaveChangesAsync();
+            TempData["sucess"] = "Contato excluído com sucesso!";
             return RedirectToAction(nameof(Index));
         }
 
