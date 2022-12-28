@@ -43,6 +43,21 @@
 - Fazer testes para o controller
 - Melhorar o Design
 
+### Gif demonstrativo
+<div align="center">
+<img align="center" alt="Rafa-pic" style="border-radius:100px;" src="https://media.discordapp.net/attachments/951643233665044541/1057750780167344280/ezgif.com-gif-maker2.gif">
+</div>
+
+#### Passo a passo do gif
+- Primeiro vai para a aba "Lista de contatos"
+- Seleciona o "+" ao lado de "Novo contato"
+- Cria o contato "teste"
+- Mostra que ele ficou em último na fila
+- Mostra que, ao clicar no nome do contato, aparece detalhes sobre ele
+- Edita o contato para "anteste", para mostrar que a posição dele muda na página de contatos (respeita a ordem alfabética)
+- Pesquisa "an" na caixa de pesquisa, tem como retorno todos os contatos que contém "an", que são "Ana Carolina" e "anteste"
+- Deleta o usuário "anteste" e mostra que ele saiu da página de contatos
+- Volta para a página inicial
 
 </br>
 </br>
