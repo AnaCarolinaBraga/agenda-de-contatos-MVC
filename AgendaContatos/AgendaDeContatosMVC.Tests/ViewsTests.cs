@@ -21,7 +21,7 @@ namespace AgendaDeContatosMVC.Tests
         }
 
         [Fact (Skip = "Moving to theory")]
-        public async void ContactsIndexLoads()
+        public async void ViewContacts_Index_ReturnSucessLoad()
         {
             //Arrange
             var client = _factory.CreateClient();
@@ -40,7 +40,7 @@ namespace AgendaDeContatosMVC.Tests
         [InlineData("/Contacts/Index")]
         [InlineData("/Contacts/Create")]
         
-        public async Task TestIfAllPagesWithoutIdLoads(string url)
+        public async Task Views_PagesWithoutId_ReturnSucessLoad(string url)
         {
             //Arrange
             var client = _factory.CreateClient();
@@ -57,7 +57,7 @@ namespace AgendaDeContatosMVC.Tests
         [InlineData("/Contacts/Delete/7")]
         [InlineData("/Contacts/Details/7")]
         [InlineData("/Contacts/Edit/7")]
-        public async Task TestIfAllPagesThatNeedIdLoads(string url)
+        public async Task Views_PagesWithId_ReturnSucessLoad(string url)
         {
             //Arrange
             var client = _factory.CreateClient();
@@ -71,7 +71,7 @@ namespace AgendaDeContatosMVC.Tests
         }
 
         [Fact]
-        public async void TestIfContentLoads()
+        public async void ViewContacts_IndexContent_ReturnSpecificContentWithSucess()
         {
             //Arrange
             var client = _factory.CreateClient();
