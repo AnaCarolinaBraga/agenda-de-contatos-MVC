@@ -24,6 +24,7 @@
 
 - .Net 6
 - Asp.net core Web App
+- C#
 - Entity Framework
 - SQL Server
 - XUnit
